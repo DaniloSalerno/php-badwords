@@ -3,9 +3,9 @@
 $paragraf = $_GET['paragraf'];
 $bad_word = $_GET['bad_word'];
 
-$paragraf_array = explode(' ', $paragraf);
-$censured = str_replace($bad_word, '***', $paragraf_array);
-var_dump($censured)
+$paragraf_array = explode(' ', strtolower($paragraf));
+$censured = str_replace(strtolower($bad_word), '***', $paragraf_array);
+
 
 
 
@@ -27,6 +27,7 @@ var_dump($censured)
     <div>
         Contiene <?php echo strlen($_GET['paragraf']); ?> caratteri
     </div>
+    <br><br><br>
     <div>
         La frase che hai scritto censurata: <?php echo implode(' ', $censured); ?>
     </div>
