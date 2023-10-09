@@ -25,7 +25,11 @@ stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 </head>
 
 <body>
-
+    <form action="./script.php" method="GET">
+        <textarea name="paragraf" id="paragraf" placeholder="Scrivi una frase"></textarea>
+        <input type="text" name="bad_word" id="bad_word" placeholder="Inserisci la parola da censurare">
+        <button type="submit">Invia</button>
+    </form>
 </body>
 
 </html>
