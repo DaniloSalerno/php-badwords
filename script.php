@@ -1,13 +1,14 @@
 <?php
 
 $paragraf = $_GET['paragraf'];
+
 $bad_word = $_GET['bad_word'];
 
+//array creato da 'paragraf' usando lo spazio come separatore
 $paragraf_array = explode(' ', strtolower($paragraf));
+
+//array con '***' al posto della parola 'bad_word'
 $censured = str_replace(strtolower($bad_word), '***', $paragraf_array);
-
-
-
 
 ?>
 
@@ -22,10 +23,10 @@ $censured = str_replace(strtolower($bad_word), '***', $paragraf_array);
 
 <body>
     <div>
-        La frase che hai scritto: <?php echo $_GET['paragraf']; ?>
+        La frase che hai scritto: <?php echo $paragraf; ?>
     </div>
     <div>
-        Contiene <?php echo strlen($_GET['paragraf']); ?> caratteri
+        Contiene <?php echo strlen($paragraf); ?> caratteri
     </div>
     <br><br><br>
     <div>
